@@ -7,7 +7,7 @@ public class ComplexNumber implements Number {
         imaginary = 0;
     }
 
-    private ComplexNumber(double real) {
+    public ComplexNumber(double real) {
         this.real = real;
     }
 
