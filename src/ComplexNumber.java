@@ -77,18 +77,9 @@ public class ComplexNumber implements Number {
     }
 
     public String toString() {
-        if (this.real != 0 && this.imaginary != 0) {
-            if (this.imaginary < 0) {
-                return this.real + " " + this.imaginary + "i";
-            } else {
-                return this.real + " + " + this.imaginary + "i";
-            }
-        } else if (this.real == 0 && this.imaginary != 0) {
-            return this.imaginary + "i";
-        } else if (this.real != 0 && this.imaginary == 0) {
-            return Double.toString(this.real);
-        } else {
-            return "0";
-        }
+        if (imaginary == 0) return real + "";
+        if (real == 0) return imaginary + "i";
+        if (imaginary < 0) return real + " " + imaginary + "i";
+        return real + " + " + imaginary + "i";
     }
 }
